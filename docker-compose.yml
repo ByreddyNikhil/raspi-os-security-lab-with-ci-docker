@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  raspi-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: raspi-os-security-lab
+    privileged: true  # needed for systemd, udev, etc.
+    volumes:
+      - .:/lab
+    stdin_open: true
+    tty: true

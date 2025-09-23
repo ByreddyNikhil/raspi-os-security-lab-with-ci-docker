@@ -1,0 +1,8 @@
+<!-- Example: custom rule to detect sandbox process start -->
+<group name="sandbox_detection">
+  <rule id="100100" level="10">
+    <if_sid>5716</if_sid>
+    <match>/sandbox/</match>
+    <description>Process started from /sandbox</description>
+  </rule>
+</group>
